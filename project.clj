@@ -6,8 +6,11 @@
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]
                  [clj-jwt "0.0.6"]
-                 [clj-time "0.7.0"]]
-  :plugins [[lein-ring "0.8.10"]]
+                 [clj-time "0.7.0"]
+                 [drift "1.5.2"]
+                 [korma "0.3.1"]]
+  :plugins [[lein-ring "0.8.10"]
+            [drift "1.5.2"]]
   :ring {:handler oidp.handler/app
          :init oidp.handler/init
          :destroy oidp.handler/destroy}
