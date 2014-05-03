@@ -8,7 +8,8 @@
                  [clj-jwt "0.0.6"]
                  [clj-time "0.7.0"]
                  [drift "1.5.2"]
-                 [korma "0.3.1"]]
+                 [korma "0.3.1"]
+                 [postgresql/postgresql "9.0-801.jdbc4"]]
   :plugins [[lein-ring "0.8.10"]
             [drift "1.5.2"]]
   :ring {:handler oidp.handler/app
