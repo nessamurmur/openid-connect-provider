@@ -5,7 +5,8 @@
             [hiccup.middleware :refer [wrap-base-url]]
             [compojure.handler :as handler]
             [compojure.route :as route]
-            [oidp.routes.home :refer [home-routes]]))
+            [oidp.routes.home :refer [home-routes]]
+            [oidp.models.schema]))
 
 (defn init []
   (println "oidp is starting"))
@@ -21,5 +22,3 @@
   (-> (routes home-routes app-routes)
       (handler/site)
       (wrap-base-url)))
-
-

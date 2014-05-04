@@ -3,11 +3,10 @@
         [korma core db]))
 
 (def db (postgres { :db (System/getenv "PG_DB")
-                      :user (System/getenv "PG_USER")
-                      :password (System/getenv "PG_PASS")
-                     }))
+                    :user (System/getenv "PG_USER")
+                    :password (System/getenv "PG_PASS")
+                   }))
 
-(defdb dev db)
 
 (defn- maybe-create-schema-table
   "Creates the schema table if it doesn't already exist."
