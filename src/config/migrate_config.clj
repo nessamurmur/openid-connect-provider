@@ -20,7 +20,8 @@
 
 (defn migrate-config []
   {:directory "src/migrations/"
-   :ns-content "\n  (:use [korma core db])"
+   :ns-content (str "\n  (:require [clojure.java.jdbc :as sql])"
+                    "\n            [config.migration-config :as config]")
    :namespace-prefix "migrations"
    :migration-number-generator incremental-migration-number-generator
    :init maybe-create-schema-table
