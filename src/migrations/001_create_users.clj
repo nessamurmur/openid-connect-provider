@@ -10,9 +10,9 @@
      :users
      [:id "varchar(32) PRIMARY KEY"]
      [:username "varchar(255) UNIQUE"]
-     [:encrypted-password "varchar(255)"]
-     [:create-at "DATETIME"]
-     [:updated-at "DATETIME"])))
+     [:encrypted_password "varchar(255)"]
+     [:create_at :timestamp]
+     [:updated_at :timestamp])))
 
 (defn down
   "Migrates the database down from version 1."
